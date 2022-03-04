@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KrishnanVenkatesh_searchApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="56" translatesAutoresizingMaskIntoConstraints="NO" id="15n-fx-O6g">
+                                <rect key="frame" x="20" y="95" width="374" height="670"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Wi-ee-pxG">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a keyword to search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fW1-bD-Kte">
+                                                <rect key="frame" x="0.0" y="0.0" width="282.5" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="searchTextFieldChange:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="ecO-lv-ggF"/>
+                                                </connections>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VjX-km-71e">
+                                                <rect key="frame" x="283.5" y="0.0" width="90.5" height="34"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90.5" id="xMC-o5-y0J"/>
+                                                </constraints>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system" title="Search">
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="11"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="searchButtonActionClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z06-3W-YWN"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rMr-Pi-MMY">
+                                        <rect key="frame" x="0.0" y="90" width="374" height="200"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="123" translatesAutoresizingMaskIntoConstraints="NO" id="z1y-9L-ZtK">
+                                        <rect key="frame" x="0.0" y="346" width="374" height="31"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kxp-Yi-BQm">
+                                                <rect key="frame" x="0.0" y="0.0" width="125.5" height="31"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Prev Img"/>
+                                                <connections>
+                                                    <action selector="ShowPrevImagesBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JfC-ht-BVK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJx-Hb-CxT">
+                                                <rect key="frame" x="248.5" y="0.0" width="125.5" height="31"/>
+                                                <color key="backgroundColor" name="AccentColor"/>
+                                                <color key="tintColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Next Img"/>
+                                                <connections>
+                                                    <action selector="showNextImagesBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4d9-kP-xU2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Le1-V9-FCu">
+                                        <rect key="frame" x="0.0" y="433" width="374" height="150"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="rB9-4v-PjM"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cDw-Yf-1Nj">
+                                        <rect key="frame" x="0.0" y="639" width="374" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Reset"/>
+                                        <connections>
+                                            <action selector="resetBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8lY-kU-khw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="15n-fx-O6g" secondAttribute="bottom" constant="97" id="9op-Pb-Vdc"/>
+                            <constraint firstItem="15n-fx-O6g" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="MQ9-sm-QuB"/>
+                            <constraint firstItem="15n-fx-O6g" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="51" id="NBj-fx-ntb"/>
+                            <constraint firstItem="15n-fx-O6g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RYC-Ii-wqQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ShowPrevImagesBtn" destination="kxp-Yi-BQm" id="pgD-k0-b3p"/>
+                        <outlet property="resetBtn" destination="cDw-Yf-1Nj" id="Jw5-tb-tec"/>
+                        <outlet property="resultImage" destination="rMr-Pi-MMY" id="pGz-wa-N2q"/>
+                        <outlet property="searchButtonAction" destination="VjX-km-71e" id="FfX-xH-GQw"/>
+                        <outlet property="searchTextField" destination="fW1-bD-Kte" id="BXl-tL-l00"/>
+                        <outlet property="showNextImagesBtn" destination="RJx-Hb-CxT" id="WwC-aU-dcq"/>
+                        <outlet property="topicInfoText" destination="Le1-V9-FCu" id="cTl-yn-2hU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
