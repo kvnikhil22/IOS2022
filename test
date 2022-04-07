@@ -1,0 +1,149 @@
+class GameViewController: UIViewController {
+
+ 
+
+    @IBOutlet weak var playerOneWinsLabel: UILabel!
+
+    @IBOutlet weak var playerTwoWinsLabel: UILabel!
+
+    
+
+    
+
+    @IBAction func onRoll(_ sender: UIButton) {
+
+        p1score = createRandomNum()
+
+        p2score = createRandomNum()
+
+        
+
+             
+
+        
+
+        if(p1score > p2score) {
+
+            p1winCount = p1winCount + 1;
+
+        } else if(p2score > p1score){
+
+            p2winCount = p2winCount + 1;
+
+        } else {
+
+            
+
+        }
+
+        
+
+        updateText()
+
+    }
+
+    
+
+    
+
+    @IBOutlet weak var playerOneScore: UILabel!
+
+    
+
+    @IBOutlet weak var playerTwoScore: UILabel!
+
+    
+
+    
+
+    @IBOutlet weak var imageOutlet: UIImageView!
+
+    
+
+    //cureent variables
+
+    var p1score: Int = 0 ;
+
+    var p2score: Int = 0 ;
+
+    
+
+    var p1winCount: Int = 0;
+
+    var p2winCount: Int = 0;
+
+    
+
+    
+
+    // variables for use
+
+    var playerOne: String = ""
+
+    var playerTwo: String = ""
+
+    
+
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+
+ 
+
+        // Do any additional setup after loading the view.
+
+        updateText()
+
+    }
+
+    
+
+    func createRandomNum() -> Int {
+
+        return Int.random(in: 0..<6)
+
+    }
+
+    
+
+    func updateText() {
+
+        playerOneWinsLabel.text = "Total number of games \(playerOne) won: \(p1winCount)"
+
+        playerTwoWinsLabel.text = "Total number of games \(playerTwo) won: \(p2winCount)"
+
+        
+
+        
+
+        playerOneScore.text = "\(playerOne) current score is: \(p1score)"
+
+        playerTwoScore.text = "\(playerTwo) current score is: \(p2score)"
+
+    }
+
+    
+
+ 
+
+    /*
+
+    // MARK: - Navigation
+
+ 
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        // Get the new view controller using segue.destination.
+
+        // Pass the selected object to the new view controller.
+
+    }
+
+    */
+
+ 
+
+}
